@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Nanum+Gothic&family=Oswald:wght@400;600;700&display=swap');
+$frameColor: #363636;
+$rose: #CBA3CD;
+$heightButt: 30px;
+$wightButt: 60px;
+$colorButt: #C62FCB;
+.header{
+  background-color: $frameColor;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  color: $rose;
+  justify-content: flex-end;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  h1{
+    align-self: center;
+    margin: 0;
+    flex-grow: 1;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 150%;
+  }
+  a{
+    max-height: $heightButt;
+    max-width: $wightButt;
+    align-self: center;
+    flex-grow: 3;
+    background-color: $rose;
+    border-radius: 10px;
+    border: 0;
+    font-family: "Oswald", sans-serif;
+    color: $frameColor;
+    padding: 10px 20px 10px 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 150%;
+    text-align: center;
+  }
+}

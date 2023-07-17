@@ -1,0 +1,46 @@
+.all {
+  color: #363636;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 150%;
+}
+
+input {
+  height: 30px;
+  width: 250px;
+  border: #363636 solid 3px;
+  border-radius: 30px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  max-width: 250px;
+  margin: auto;
+}
+
+button {
+  margin-top: 20px;
+  width: 254px;
+}
+
+a {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 100%;
+  color: #6F6E6F;
+}
+
+/*# sourceMappingURL=login.module.css.map */

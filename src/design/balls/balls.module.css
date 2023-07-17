@@ -1,0 +1,115 @@
+.ball {
+  display: inline-block;
+  margin: auto;
+}
+
+.ball1 {
+  background-color: #363636;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  position: absolute;
+  transform: translate(-35px, 70px);
+  animation: 6s ease-out infinite ball1;
+}
+
+.ball2 {
+  background-color: #CBA3CD;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  position: absolute;
+  transform: translate(35px, 0);
+  animation: 6s ease-out infinite ball2;
+}
+
+.ball3 {
+  background-color: #902C94;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  position: absolute;
+  transform: translate(-35px, 0);
+  animation: 6s ease-out infinite ball3;
+}
+
+.ball4 {
+  background-color: #6F6E6F;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  position: absolute;
+  transform: translate(35px, 70px);
+  animation: 6s ease-out infinite ball4;
+}
+
+@keyframes ball1 {
+  0%, 100% {
+    transform: translate(-35px, 70px);
+  }
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: translate(0, 35px);
+  }
+  25% {
+    transform: translate(35px, 70px);
+  }
+  50% {
+    transform: translate(35px, 0);
+  }
+  75% {
+    transform: translate(-35px, 0);
+  }
+}
+@keyframes ball2 {
+  0%, 100% {
+    transform: translate(35px, 0);
+  }
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: translate(0, 35px);
+  }
+  25% {
+    transform: translate(-35px, 0);
+  }
+  50% {
+    transform: translate(-35px, 70px);
+  }
+  75% {
+    transform: translate(35px, 70px);
+  }
+}
+@keyframes ball3 {
+  0%, 100% {
+    transform: translate(-35px, 0);
+  }
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: translate(0, 35px);
+  }
+  25% {
+    transform: translate(-35px, 70px);
+  }
+  50% {
+    transform: translate(35px, 70px);
+  }
+  75% {
+    transform: translate(35px, 0);
+  }
+}
+@keyframes ball4 {
+  0%, 100% {
+    transform: translate(35px, 70px);
+  }
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: translate(0, 35px);
+  }
+  25% {
+    transform: translate(35px, 0);
+  }
+  50% {
+    transform: translate(-35px, 0);
+  }
+  75% {
+    transform: translate(-35px, 70px);
+  }
+}
+
+/*# sourceMappingURL=balls.module.css.map */

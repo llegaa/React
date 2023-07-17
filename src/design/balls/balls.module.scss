@@ -1,0 +1,81 @@
+
+$ColorGrey: #363636;
+$ColorLPurpul: #CBA3CD;
+$ColorPurpul: #902C94;
+$ColorLGrey: #6F6E6F;
+$distance: 70px;
+$sizeBall: 30px;
+$time: 6s;
+@mixin balls($colorBall) {
+  background-color: $colorBall;
+  height: $sizeBall;
+  width: $sizeBall;
+  border-radius: $sizeBall;
+  position: absolute;
+}
+
+.ball{
+  display: inline-block;
+  margin: auto;
+}
+
+.ball1{
+  @include balls($ColorGrey);
+  transform: translate(-$distance/2,$distance);
+  animation: $time ease-out infinite ball1;
+}
+.ball2{
+  @include balls($ColorLPurpul);
+  transform: translate($distance/2,0);
+  animation: $time ease-out infinite ball2;
+}
+.ball3{
+  @include balls($ColorPurpul);
+  transform: translate(-$distance/2,0);
+  animation: $time ease-out infinite ball3;
+}
+.ball4{
+  @include balls($ColorLGrey);
+  transform: translate($distance/2,$distance);
+  animation: $time ease-out infinite ball4;
+}
+
+@keyframes ball1 {
+  0%,100%{
+    transform: translate(-$distance/2,$distance);
+  }
+  12.5%,37.5%,62.5%,87.5%{transform: translate(0,$distance/2)}
+  25%{transform: translate($distance/2,$distance)}
+  50%{transform: translate($distance/2,0)}
+  75%{transform: translate(-$distance/2,0)}
+}
+
+@keyframes ball2 {
+  0%,100%{
+    transform: translate($distance/2,0);
+  }
+  12.5%,37.5%,62.5%,87.5%{transform: translate(0,$distance/2)}
+  25%{ transform: translate(-$distance/2,0)}
+  50%{transform: translate(-$distance/2,$distance)}
+  75%{transform: translate($distance/2,$distance)}
+}
+
+
+@keyframes ball3 {
+  0%,100%{
+    transform: translate(-$distance/2,0);
+  }
+  12.5%,37.5%,62.5%,87.5%{transform: translate(0,$distance/2)}
+  25%{transform: translate(-$distance/2,$distance)}
+  50%{transform: translate($distance/2,$distance)}
+  75%{transform: translate($distance/2,0)}
+}
+@keyframes ball4 {
+  0%,100%{
+    transform: translate($distance/2,$distance);
+  }
+  12.5%,37.5%,62.5%,87.5%{transform: translate(0,$distance/2)}
+  25%{transform: translate($distance/2,0)}
+  50%{transform: translate(-$distance/2,0)}
+  75%{transform: translate(-$distance/2,$distance)}
+}

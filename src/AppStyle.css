@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Nanum+Gothic&family=Oswald:wght@400;600;700&display=swap");
+body {
+  font-family: "Oswald", sans-serif;
+  font-size: 62.5%;
+  font-style: normal;
+}
+
+.markup {
+  display: grid;
+  grid-template-rows: 15vh auto 15vh;
+  height: 100vh;
+}
+
+button {
+  background-color: #CBA3CD;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 150%;
+  border: #363636 solid 3px;
+  border-radius: 30px;
+  height: 40px;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+/*# sourceMappingURL=AppStyle.css.map */

@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Nanum+Gothic&family=Oswald:wght@400;600;700&display=swap");
+.header {
+  background-color: #363636;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  color: #CBA3CD;
+  justify-content: flex-end;
+  padding-right: 5vw;
+  padding-left: 5vw;
+}
+.header h1 {
+  align-self: center;
+  margin: 0;
+  flex-grow: 1;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 150%;
+}
+.header a {
+  max-height: 30px;
+  max-width: 60px;
+  align-self: center;
+  flex-grow: 3;
+  background-color: #CBA3CD;
+  border-radius: 10px;
+  border: 0;
+  font-family: "Oswald", sans-serif;
+  color: #363636;
+  padding: 10px 20px 10px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 150%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=header.module.css.map */
