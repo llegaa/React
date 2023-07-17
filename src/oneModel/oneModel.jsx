@@ -1,8 +1,9 @@
 import {NavLink} from "react-router-dom";
 import React from "react";
+import s from "./oneModel.module.css"
 
 let OneModel = ()=>{
-    return <>
+    return <div className={s.all}>
         <table>
             <caption>Модель props.name_model</caption>
             <tr><td>Имя:</td><td>props.name</td></tr>
@@ -10,10 +11,12 @@ let OneModel = ()=>{
             <tr><td>Тип:</td><td id="typTable" >props.type</td></tr>
             <tr><td>Цвет:</td><td id="colTable">props.color</td></tr>
             <tr><td>Размер:</td><td id="sizTable">props.size</td></tr>
+            <tr><td><NavLink to="/id/reduction">Редактировать модель</NavLink></td>
+                <td><button>Удалить модель</button></td></tr>
         </table>
         <div></div>
-        <NavLink to="/reduction">Редактировать модель</NavLink>
-        <button>Удалить модель</button>
-    </>
+
+
+    </div>
 }
 export default OneModel

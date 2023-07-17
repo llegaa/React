@@ -6,9 +6,11 @@ import Balls from "../design/balls/balls";
 import main from "./main.module.css";
 import Model from "./model";
 import React from "react";
+import {useParams} from "react-router-dom";
 
 
-class MainContainer1 extends React.Component{
+class MainContainer extends React.Component{
+
     componentDidMount() {
         this.props.toggleIsFetching(true)
         axios.get('http://127.0.0.1:8000/api/v3/models').then((response)=>{
@@ -24,7 +26,7 @@ class MainContainer1 extends React.Component{
     }
     render() {
         return  <>
-           <Main {...this.props}/>
+           <Main {...this.props} add={this.add} onModelChange={this.onModelChange}/>
         </>
     }
 }
@@ -52,5 +54,4 @@ let mapStateToProps = (state)=>{
 //
 //     }
 // }
-const MainContainer = connect(mapStateToProps, {addModel, updateNewName,setModels,toggleIsFetching})(Main)
-export default MainContainer
+export default connect(mapStateToProps, {addModel, updateNewName,setModels,toggleIsFetching})(MainContainer)

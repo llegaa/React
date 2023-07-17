@@ -14,7 +14,7 @@ function App() {
                   <Route path="/" element={<MainContainer/>}/>
                   <Route path="/login" element={<LoginContainer/>}/>
                   <Route path="/id" element={<OneModel/>}/>
-                  <Route path="/reduction" element={<OneModel/>}/>
+                  <Route path="/id/reduction" element={<OneModel/>}/>
               </Routes>
           <Footer/>
       </div>

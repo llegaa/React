@@ -1,7 +1,6 @@
 .all {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
+  margin-left: auto;
+  margin-right: auto;
   color: #363636;
   text-align: center;
   font-weight: 700;
@@ -9,4 +8,4 @@
   line-height: 150%;
 }
 
-/*# sourceMappingURL=main.module.css.map */
+/*# sourceMappingURL=oneModel.module.css.map */
