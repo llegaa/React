@@ -1,20 +1,23 @@
 import './AppStyle.css'
-import Header from "./header/header";
 import Footer from "./footer/footer";
 import {Route, Routes} from "react-router-dom";
 import MainContainer from "./main/mainContaner";
 import LoginContainer from "./login/loginContainer";
-import OneModel from "./oneModel/oneModel";
+import OneModelFunc from "./oneModel/oneModelFunc";
+import HeaderContainer from "./header/headerContainer";
+import OneModelReductContainer from "./oneModelRrduct/oneModelReductContainer";
+import AddModelContainer from "./addModel/addModelContainer";
 
 function App() {
   return (
       <div className="markup">
-          <Header/>
+          <HeaderContainer/>
               <Routes>
                   <Route path="/" element={<MainContainer/>}/>
                   <Route path="/login" element={<LoginContainer/>}/>
-                  <Route path="/id" element={<OneModel/>}/>
-                  <Route path="/id/reduction" element={<OneModel/>}/>
+                  <Route path="/model/:modelId" element={<OneModelFunc/>}/>
+                  <Route path="/:modelId/reduction" element={<OneModelReductContainer/>}/>
+                  <Route path={"/addmodel"} element={<AddModelContainer/>}/>
               </Routes>
           <Footer/>
       </div>

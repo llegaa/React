@@ -5,7 +5,7 @@ $heightButt: 30px;
 $wightButt: 60px;
 $colorButt: #C62FCB;
 .header{
-  background-color: $frameColor;
+  border-bottom: $frameColor solid 2px;
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -13,7 +13,9 @@ $colorButt: #C62FCB;
   justify-content: flex-end;
   padding-right: 5vw;
   padding-left: 5vw;
+
   h1{
+    color: $frameColor;
     align-self: center;
     margin: 0;
     flex-grow: 1;
@@ -36,5 +38,15 @@ $colorButt: #C62FCB;
     font-size: 1rem;
     line-height: 150%;
     text-align: center;
+  }
+  button{
+    margin: auto;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    color: $frameColor;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 150%;
   }
 }

@@ -1,4 +1,5 @@
-import axios from "axios";
+import {modelApi} from "../api/api";
+
 const SET_MODELS = 'SET-MODELS'
 const ADD_MODEL = 'ADD-MODEL'
 const UPDATE_NEW_NAME='UPDATE-NEW-NAME'
@@ -10,14 +11,11 @@ let initialState =  {
         isFetching: false
 
 }
-let getDataMod = ()=>{
-    axios.get('http://127.0.0.1:8000/api/v3/models').then((response)=>{return response})
-}
 const modelsReducer = (state = initialState, action)=>{
     switch (action.type){
         case ADD_MODEL:{
         let model = {
-            name: 'asdfg', name_model: state.newNameModel, type: 'cube', color: 'red', size: '6'
+           name: 'asdfg', name_model: state.newNameModel, type: 'cube', color: 'red', size: '6'
         }
             let stateCopy = {...state}
             stateCopy.models = [...state.models]
@@ -29,8 +27,7 @@ const modelsReducer = (state = initialState, action)=>{
             let stateCopy = {...state}
             stateCopy.newNameModel={...state.newNameModel}
             stateCopy.newNameModel = action.newNameModel
-            console.log(stateCopy)
-            return stateCopy;}
+            return stateCopy}
         case SET_MODELS:{
             let stateCopy = {...state}
             stateCopy.models = [...state.models]
@@ -70,4 +67,12 @@ export const toggleIsFetching =(isFetching)=>{
         isFetching: isFetching
     }
 }
+export const getModelsThunkCreator =()=>{
+    return (dispatch)=>{
+    dispatch(toggleIsFetching(true))
+    modelApi.getAllModels()
+        .then(responce=>{
+            dispatch(toggleIsFetching(false))
+        dispatch(setModels(responce))})
+}}
 export default modelsReducer
